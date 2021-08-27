@@ -1,0 +1,366 @@
+2021-08-27 14:44:59,365 INFO org.springframework.boot.StartupInfoLogger [main] Starting DesafioCissApplication using Java 16.0.2 on DESKTOP-77NEQR4 with PID 21496 (S:\development\projects\desafio-CISS\target\classes started by DM in S:\development\projects\desafio-CISS)
+2021-08-27 14:44:59,367 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: development
+2021-08-27 14:44:59,828 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-27 14:44:59,838 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2021-08-27 14:45:00,248 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-08-27 14:45:00,257 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-27 14:45:00,257 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-08-27 14:45:00,257 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-08-27 14:45:00,356 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-08-27 14:45:00,357 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 953 ms
+2021-08-27 14:45:00,603 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-08-27 14:45:00,840 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-08-27 14:45:00,961 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to dbo
+2021-08-27 14:45:01,029 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2021-08-27 14:45:01,456 INFO liquibase.logging.core.JavaLogger [main] Reading from DATABASECHANGELOG
+2021-08-27 14:45:01,494 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2021-08-27 14:45:01,577 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-27 14:45:01,618 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.5.6.Final
+2021-08-27 14:45:01,745 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-27 14:45:01,833 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2021-08-27 14:45:01,976 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-27 14:45:01,984 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 14:45:02,257 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2021-08-27 14:45:02,273 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-27 14:45:02,281 INFO org.springframework.boot.StartupInfoLogger [main] Started DesafioCissApplication in 3.204 seconds (JVM running for 3.811)
+2021-08-27 14:49:04,460 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(12)-127.0.0.1] Application shutdown requested.
+2021-08-27 14:49:04,500 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(12)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 14:49:04,501 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(12)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2021-08-27 14:49:04,503 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(12)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2021-08-27 14:49:11,072 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [Console]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [Console]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [Console]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [Console]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:82)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:117)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:111)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:62)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:296)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1279)
+	at com.marco.desafiociss.DesafioCissApplication.main(DesafioCissApplication.java:10)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [Console]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [Console]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [Console]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [Console]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 18 common frames omitted
+2021-08-27 14:50:59,679 INFO org.springframework.boot.StartupInfoLogger [main] Starting DesafioCissApplication using Java 16.0.2 on DESKTOP-77NEQR4 with PID 23452 (S:\development\projects\desafio-CISS\target\classes started by DM in S:\development\projects\desafio-CISS)
+2021-08-27 14:50:59,682 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: development
+2021-08-27 14:51:00,142 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-27 14:51:00,153 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2021-08-27 14:51:00,587 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-08-27 14:51:00,597 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-27 14:51:00,598 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-08-27 14:51:00,598 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-08-27 14:51:00,698 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-08-27 14:51:00,698 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 981 ms
+2021-08-27 14:51:00,947 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-08-27 14:51:01,196 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-08-27 14:51:01,315 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to dbo
+2021-08-27 14:51:01,375 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2021-08-27 14:51:01,830 INFO liquibase.logging.core.JavaLogger [main] Reading from DATABASECHANGELOG
+2021-08-27 14:51:01,872 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2021-08-27 14:51:01,953 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-27 14:51:01,994 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.5.6.Final
+2021-08-27 14:51:02,122 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-27 14:51:02,213 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2021-08-27 14:51:02,364 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-27 14:51:02,377 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 14:51:02,651 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2021-08-27 14:51:02,665 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-27 14:51:02,674 INFO org.springframework.boot.StartupInfoLogger [main] Started DesafioCissApplication in 3.278 seconds (JVM running for 3.883)
+2021-08-27 14:51:51,955 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(8)-127.0.0.1] Application shutdown requested.
+2021-08-27 14:51:51,995 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(8)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 14:51:51,996 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(8)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2021-08-27 14:51:51,999 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(8)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2021-08-27 14:51:58,283 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.PatternLayout("null") - Empty or null pattern.
+ERROR in ch.qos.logback.classic.PatternLayout("null") - Empty or null pattern.
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:82)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:117)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:111)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:62)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:296)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1279)
+	at com.marco.desafiociss.DesafioCissApplication.main(DesafioCissApplication.java:10)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.PatternLayout("null") - Empty or null pattern.
+ERROR in ch.qos.logback.classic.PatternLayout("null") - Empty or null pattern.
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 18 common frames omitted
+2021-08-27 14:52:34,182 INFO org.springframework.boot.StartupInfoLogger [main] Starting DesafioCissApplication using Java 16.0.2 on DESKTOP-77NEQR4 with PID 21136 (S:\development\projects\desafio-CISS\target\classes started by DM in S:\development\projects\desafio-CISS)
+2021-08-27 14:52:34,184 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: development
+2021-08-27 14:52:34,639 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-27 14:52:34,649 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2021-08-27 14:52:35,052 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-08-27 14:52:35,060 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-27 14:52:35,060 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-08-27 14:52:35,061 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-08-27 14:52:35,158 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-08-27 14:52:35,159 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 940 ms
+2021-08-27 14:52:35,401 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-08-27 14:52:35,636 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-08-27 14:52:35,755 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to dbo
+2021-08-27 14:52:35,817 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2021-08-27 14:52:36,214 INFO liquibase.logging.core.JavaLogger [main] Reading from DATABASECHANGELOG
+2021-08-27 14:52:36,255 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2021-08-27 14:52:36,337 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-27 14:52:36,378 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.5.6.Final
+2021-08-27 14:52:36,505 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-27 14:52:36,592 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2021-08-27 14:52:36,729 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-27 14:52:36,742 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 14:52:37,024 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2021-08-27 14:52:37,038 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-27 14:52:37,047 INFO org.springframework.boot.StartupInfoLogger [main] Started DesafioCissApplication in 3.146 seconds (JVM running for 3.716)
+2021-08-27 15:04:57,216 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.marco.desafiociss.DesafioCissApplicationTests], using SpringBootContextLoader
+2021-08-27 15:04:57,225 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.marco.desafiociss.DesafioCissApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-08-27 15:04:57,226 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.marco.desafiociss.DesafioCissApplicationTests]: DesafioCissApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-08-27 15:04:57,328 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.marco.desafiociss.DesafioCissApplication for test class com.marco.desafiociss.DesafioCissApplicationTests
+2021-08-27 15:04:57,433 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-08-27 15:04:57,452 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@c055c54, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@25e2ab5a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@35e5d0e5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@73173f63, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@55562aa9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@655ef322, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7e276594, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3401a114, org.springframework.test.context.event.EventPublishingTestExecutionListener@5066d65f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4233e892, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@77d2e85, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3ecd267f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@58ffcbd7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@555cf22, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6bb2d00b]
+2021-08-27 15:04:57,759 INFO org.springframework.boot.StartupInfoLogger [main] Starting DesafioCissApplicationTests using Java 16.0.2 on DESKTOP-77NEQR4 with PID 19800 (started by DM in S:\development\projects\desafio-CISS)
+2021-08-27 15:04:57,761 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: development
+2021-08-27 15:04:58,367 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-27 15:04:58,381 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2021-08-27 15:04:58,997 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-08-27 15:04:59,321 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-08-27 15:04:59,471 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to dbo
+2021-08-27 15:04:59,563 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2021-08-27 15:05:00,031 INFO liquibase.logging.core.JavaLogger [main] Reading from DATABASECHANGELOG
+2021-08-27 15:05:00,081 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2021-08-27 15:05:00,235 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-27 15:05:00,291 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.5.6.Final
+2021-08-27 15:05:00,477 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-27 15:05:00,601 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2021-08-27 15:05:00,815 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-27 15:05:00,825 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 15:05:01,680 INFO org.springframework.boot.StartupInfoLogger [main] Started DesafioCissApplicationTests in 4.18 seconds (JVM running for 5.162)
+2021-08-27 15:05:02,097 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 15:05:02,099 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2021-08-27 15:05:02,146 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2021-08-27 15:11:10,413 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(27)-127.0.0.1] Application shutdown requested.
+2021-08-27 15:11:10,440 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(27)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 15:11:10,442 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(27)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2021-08-27 15:11:10,444 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(27)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2021-08-27 15:11:17,018 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for conversion word [wEx]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - [wEx] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for conversion word [wEx]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - [wEx] is not a valid conversion word
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:82)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:117)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:111)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:62)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:296)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1279)
+	at com.marco.desafiociss.DesafioCissApplication.main(DesafioCissApplication.java:10)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - There is no conversion class registered for conversion word [wEx]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4009e306 - [wEx] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for composite conversion word [clr]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - Failed to create converter for [%clr] keyword
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - There is no conversion class registered for conversion word [wEx]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@366ac49b - [wEx] is not a valid conversion word
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 18 common frames omitted
+2021-08-27 15:12:52,421 INFO org.springframework.boot.StartupInfoLogger [main] Starting DesafioCissApplication using Java 16.0.2 on DESKTOP-77NEQR4 with PID 13336 (S:\development\projects\desafio-CISS\target\classes started by DM in S:\development\projects\desafio-CISS)
+2021-08-27 15:12:52,424 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: development
+2021-08-27 15:12:52,879 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-27 15:12:52,890 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2021-08-27 15:12:53,305 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-08-27 15:12:53,313 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-08-27 15:12:53,313 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-08-27 15:12:53,409 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-08-27 15:12:53,410 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 951 ms
+2021-08-27 15:12:53,650 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-08-27 15:12:53,884 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-08-27 15:12:54,005 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to dbo
+2021-08-27 15:12:54,065 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2021-08-27 15:12:54,458 INFO liquibase.logging.core.JavaLogger [main] Reading from DATABASECHANGELOG
+2021-08-27 15:12:54,501 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2021-08-27 15:12:54,584 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-27 15:12:54,626 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.5.6.Final
+2021-08-27 15:12:54,753 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-27 15:12:54,842 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2021-08-27 15:12:54,987 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-27 15:12:54,994 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 15:12:55,288 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-27 15:12:55,297 INFO org.springframework.boot.StartupInfoLogger [main] Started DesafioCissApplication in 3.153 seconds (JVM running for 3.734)
+2021-08-27 15:32:50,740 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(28)-127.0.0.1] Application shutdown requested.
+2021-08-27 15:32:50,763 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(28)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 15:32:50,765 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(28)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2021-08-27 15:32:50,767 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(28)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2021-08-27 15:33:00,164 INFO org.springframework.boot.StartupInfoLogger [main] Starting DesafioCissApplication using Java 16.0.2 on DESKTOP-77NEQR4 with PID 23156 (S:\development\projects\desafio-CISS\target\classes started by DM in S:\development\projects\desafio-CISS)
+2021-08-27 15:33:00,168 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: development
+2021-08-27 15:33:00,826 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-27 15:33:00,839 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2021-08-27 15:33:01,343 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-08-27 15:33:01,355 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-08-27 15:33:01,355 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-08-27 15:33:01,474 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-08-27 15:33:01,474 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1266 ms
+2021-08-27 15:33:01,756 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-08-27 15:33:02,054 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-08-27 15:33:02,195 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to dbo
+2021-08-27 15:33:02,268 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2021-08-27 15:33:02,693 INFO liquibase.logging.core.JavaLogger [main] Reading from DATABASECHANGELOG
+2021-08-27 15:33:02,740 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2021-08-27 15:33:02,830 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-27 15:33:02,881 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.5.6.Final
+2021-08-27 15:33:03,034 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-27 15:33:03,145 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2021-08-27 15:33:03,323 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-27 15:33:03,334 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 15:33:04,228 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-27 15:33:04,238 INFO org.springframework.boot.StartupInfoLogger [main] Started DesafioCissApplication in 4.43 seconds (JVM running for 5.29)
+2021-08-27 15:33:17,908 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-27 15:33:17,909 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-08-27 15:33:17,910 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2021-08-27 15:33:18,001 INFO org.springdoc.api.AbstractOpenApiResource [http-nio-8080-exec-1] Init duration for springdoc-openapi is: 29 ms
+2021-08-27 17:07:34,570 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.marco.desafiociss.DesafioCissApplicationTests], using SpringBootContextLoader
+2021-08-27 17:07:34,577 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.marco.desafiociss.DesafioCissApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-08-27 17:07:34,578 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.marco.desafiociss.DesafioCissApplicationTests]: DesafioCissApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-08-27 17:07:34,683 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.marco.desafiociss.DesafioCissApplication for test class com.marco.desafiociss.DesafioCissApplicationTests
+2021-08-27 17:07:34,784 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-08-27 17:07:34,810 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7b5a12ae, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5553d0f5, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1af687fe, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@14dda234, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3f390d63, org.springframework.test.context.support.DirtiesContextTestExecutionListener@74a6a609, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5a411614, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2374d36a, org.springframework.test.context.event.EventPublishingTestExecutionListener@54d18072, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1506f20f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@47a5b70d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@424fd310, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1a45193b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@38f116f6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5286c33a]
+2021-08-27 17:07:35,106 INFO org.springframework.boot.StartupInfoLogger [main] Starting DesafioCissApplicationTests using Java 16.0.2 on DESKTOP-77NEQR4 with PID 26240 (started by DM in S:\development\projects\desafio-CISS)
+2021-08-27 17:07:35,108 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: development
+2021-08-27 17:07:35,822 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-27 17:07:35,836 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2021-08-27 17:07:36,559 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-08-27 17:07:36,900 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-08-27 17:07:37,061 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to dbo
+2021-08-27 17:07:37,167 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2021-08-27 17:07:37,685 INFO liquibase.logging.core.JavaLogger [main] Reading from DATABASECHANGELOG
+2021-08-27 17:07:37,744 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2021-08-27 17:07:37,890 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-27 17:07:37,948 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.5.6.Final
+2021-08-27 17:07:38,114 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-27 17:07:38,225 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2021-08-27 17:07:38,411 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-27 17:07:38,424 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 17:07:39,969 INFO org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration [main] 
+
+Using generated security password: 4a468ca2-5276-4572-8496-b5b1de4d38ef
+
+2021-08-27 17:07:40,164 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a6a3fc4, org.springframework.security.web.context.SecurityContextPersistenceFilter@684430c1, org.springframework.security.web.header.HeaderWriterFilter@5c552f08, org.springframework.security.web.csrf.CsrfFilter@606f0f70, org.springframework.security.web.authentication.logout.LogoutFilter@44aa5585, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@15d2ea6b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@747f0f34, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@48cbe1c9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5b72b13a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@370a935f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d4531fa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67e628b, org.springframework.security.web.session.SessionManagementFilter@1107c465, org.springframework.security.web.access.ExceptionTranslationFilter@59c00722, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7e366c6f]
+2021-08-27 17:07:40,254 INFO org.springframework.boot.StartupInfoLogger [main] Started DesafioCissApplicationTests in 5.402 seconds (JVM running for 6.411)
+2021-08-27 17:07:40,695 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 17:07:40,698 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2021-08-27 17:07:40,703 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
