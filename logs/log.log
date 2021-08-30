@@ -9841,3 +9841,82 @@ Using generated security password: 2f7b8389-f30d-4261-a977-e672cde0c0e7
 2021-08-30 13:39:58,676 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-8] EXECUTANDO METODO tryGetInfo
 2021-08-30 13:40:38,691 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-10] EXECUTANDO METODO resolveToken
 2021-08-30 13:40:38,692 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-10] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:46:08,352 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(16)-127.0.0.1] Application shutdown requested.
+2021-08-30 13:46:08,380 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(16)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-30 13:46:08,381 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(16)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2021-08-30 13:46:08,384 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(16)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2021-08-30 13:46:16,573 INFO org.springframework.boot.StartupInfoLogger [main] Starting DesafioCissApplication using Java 16.0.1 on DESKTOP-77NEQR4 with PID 19840 (S:\development\projects\desafio-CISS\target\classes started by DM in S:\development\projects\desafio-CISS)
+2021-08-30 13:46:16,577 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.0-SNAPSHOT, Spring v5.3.9
+2021-08-30 13:46:16,577 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: development
+2021-08-30 13:46:17,237 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-30 13:46:17,296 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interfaces.
+2021-08-30 13:46:17,957 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-08-30 13:46:17,967 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-08-30 13:46:17,968 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-08-30 13:46:18,083 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-08-30 13:46:18,084 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1471 ms
+2021-08-30 13:46:18,346 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-08-30 13:46:18,597 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-08-30 13:46:18,723 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to dbo
+2021-08-30 13:46:18,804 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2021-08-30 13:46:19,414 INFO liquibase.logging.core.JavaLogger [main] Reading from DATABASECHANGELOG
+2021-08-30 13:46:19,470 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2021-08-30 13:46:19,539 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-30 13:46:19,590 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.5.6.Final
+2021-08-30 13:46:19,741 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-30 13:46:19,845 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2021-08-30 13:46:20,400 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-30 13:46:20,409 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-30 13:46:21,858 INFO org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration [main] 
+
+Using generated security password: d9f84156-b3e3-4701-ad91-2c8e6940ccfd
+
+2021-08-30 13:46:21,946 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71739267, org.springframework.security.web.context.SecurityContextPersistenceFilter@4b37b01e, org.springframework.security.web.header.HeaderWriterFilter@5a438c0a, org.springframework.web.filter.CorsFilter@6d810e94, org.springframework.security.web.authentication.logout.LogoutFilter@26c349fc, com.marco.desafiociss.security.JwtTokenFilter@6b9ce7a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@561b4c61, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f9191c1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17931cc0, org.springframework.security.web.session.SessionManagementFilter@6971c6b7, org.springframework.security.web.access.ExceptionTranslationFilter@35ef158f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@16021f6e]
+2021-08-30 13:46:22,001 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-30 13:46:22,010 INFO org.springframework.boot.StartupInfoLogger [main] Started DesafioCissApplication in 5.765 seconds (JVM running for 6.648)
+2021-08-30 13:46:42,835 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-30 13:46:42,835 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-08-30 13:46:42,836 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2021-08-30 13:46:42,867 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-2] EXECUTANDO METODO resolveToken
+2021-08-30 13:46:42,868 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-2] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:46:43,229 DEBUG com.marco.desafiociss.annotation.aspect.NivelAcessoAspect [http-nio-8080-exec-2] EXECUTANDO ANNOTATION NivelAcesso
+2021-08-30 13:46:43,230 INFO com.marco.desafiociss.service.impl.UsuarioServiceImpl [http-nio-8080-exec-2] executando metodo cadastrar
+2021-08-30 13:46:43,245 ERROR com.marco.desafiociss.errors.ErrorHandler [http-nio-8080-exec-2] Usuário já cadastrado
+2021-08-30 13:47:00,289 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-4] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:00,290 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-4] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:00,295 DEBUG com.marco.desafiociss.annotation.aspect.NivelAcessoAspect [http-nio-8080-exec-4] EXECUTANDO ANNOTATION NivelAcesso
+2021-08-30 13:47:00,296 INFO com.marco.desafiociss.service.impl.UsuarioServiceImpl [http-nio-8080-exec-4] executando metodo cadastrar
+2021-08-30 13:47:02,283 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-6] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:02,284 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-6] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:05,387 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-8] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:05,388 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-8] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:08,407 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-10] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:08,408 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-10] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:11,008 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-2] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:11,009 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-2] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:12,074 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-4] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:12,074 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-4] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:13,306 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-6] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:13,307 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-6] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:13,832 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-8] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:13,832 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-8] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:15,102 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-10] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:15,103 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-10] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:15,618 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-2] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:15,618 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-2] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:16,007 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-4] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:16,007 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-4] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:17,834 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-6] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:17,835 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-6] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:18,995 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-8] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:18,995 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-8] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:19,557 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-10] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:19,557 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-10] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:20,501 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-2] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:20,501 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-2] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:21,007 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-4] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:21,007 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-4] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:21,587 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-6] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:21,587 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-6] EXECUTANDO METODO tryGetInfo
+2021-08-30 13:47:22,015 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-8] EXECUTANDO METODO resolveToken
+2021-08-30 13:47:22,015 DEBUG com.marco.desafiociss.security.JwtTokenProvider [http-nio-8080-exec-8] EXECUTANDO METODO tryGetInfo

@@ -11,6 +11,8 @@ import com.marco.desafiociss.repository.custom.UsuarioRepositoryCustom;
 public interface UsuarioRepository extends UsuarioRepositoryCustom, JpaRepository<Usuario, Long> {
 	abstract <T> Optional<T> findFirstByEmailIgnoreCase(String email, Class<T> type);
 
+	abstract <T> Optional<T> findFirstByEmailIgnoreCaseOrPis(String email, String pis, Class<T> type);
+
 	abstract Optional<Usuario> findNivelAcessoById(@Param("id") Long id);
 
 	abstract <T> Optional<T> findFirstById(@Param("id") Long id, Class<T> type);

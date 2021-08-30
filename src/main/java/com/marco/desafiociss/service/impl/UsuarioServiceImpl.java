@@ -51,7 +51,9 @@ public class UsuarioServiceImpl implements UsuarioService {
 	public Boolean cadastrar(AutenticacaoUsuarioDTO autenticacaoDTO, CadastroUsuarioDTO cadastroUsuarioDTO) {
 		log.info("executando metodo cadastrar");
 
-		if (this.usuarioRepository.findFirstByEmailIgnoreCase(cadastroUsuarioDTO.getEmail(), Long.class).isPresent()) {
+		if (this.usuarioRepository
+				.findFirstByEmailIgnoreCaseOrPis(cadastroUsuarioDTO.getEmail(), cadastroUsuarioDTO.getPis(), Long.class)
+				.isPresent()) {
 			throw new BusinessServerException(ErrorCode.USER_ALREADY_EXISTS);
 		}
 
