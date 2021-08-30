@@ -12,7 +12,7 @@ public class FiltroUsuarioDTO {
 	private String orderField;
 	@NotNull
 	private Long page;
-	private Date dataCriacao;
+	private Date dataCadastro;
 	private String nome;
 	private String sobrenome;
 	private String email;

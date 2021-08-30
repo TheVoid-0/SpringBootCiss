@@ -7,6 +7,7 @@ import com.marco.desafiociss.dto.FiltroUsuarioDTO;
 import com.marco.desafiociss.dto.LoginUsuarioDTO;
 import com.marco.desafiociss.dto.PageDTO;
 import com.marco.desafiociss.dto.UsuarioDTO;
+import com.marco.desafiociss.dto.UsuarioProjectionDTO;
 import com.marco.desafiociss.enums.NivelAcessoEnum;
 
 public interface UsuarioService {
@@ -16,11 +17,12 @@ public interface UsuarioService {
 
 	abstract NivelAcessoEnum getNivelAcesso(Long id);
 
-	abstract UsuarioDTO findOneById(AutenticacaoUsuarioDTO autenticacaoUsuarioDTO, Long id);
+	abstract UsuarioProjectionDTO findOneById(AutenticacaoUsuarioDTO autenticacaoUsuarioDTO, Long id);
 
 	abstract PageDTO<UsuarioDTO> filtrarUsuarios(FiltroUsuarioDTO filtroUsuarioDTO);
 
-	abstract UsuarioDTO save(AutenticacaoUsuarioDTO autenticacaoUsuarioDTO, Long id, EditarUsuarioDTO editarUsuarioDTO);
+	abstract UsuarioDTO save(AutenticacaoUsuarioDTO autenticacaoUsuarioDTO, Long id,
+			EditarUsuarioDTO editarUsuarioDTO);
 
 	abstract void delete(AutenticacaoUsuarioDTO autenticacaoUsuarioDTO, Long id);
 }

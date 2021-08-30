@@ -13,6 +13,7 @@ import com.marco.desafiociss.repository.custom.UsuarioRepositoryCustom;
 import com.marco.desafiociss.util.QueryDslUtil;
 import com.querydsl.core.types.Order;
 import com.querydsl.core.types.Projections;
+import com.querydsl.core.types.dsl.DateExpression;
 import com.querydsl.jpa.impl.JPAQuery;
 
 public class UsuarioRepositoryCustomImpl implements UsuarioRepositoryCustom {
@@ -51,8 +52,8 @@ public class UsuarioRepositoryCustomImpl implements UsuarioRepositoryCustom {
 		if (filtroUsuarioDTO.getPis() != null) {
 			query.where(qUsuario.pis.like(QueryDslUtil.addLike(filtroUsuarioDTO.getPis())));
 		}
-		if (filtroUsuarioDTO.getDataCriacao() != null) {
-			query.where(qUsuario.dataCadastro.between(new Date(), filtroUsuarioDTO.getDataCriacao()));
+		if (filtroUsuarioDTO.getDataCadastro() != null) {
+			query.where(qUsuario.dataCadastro.lt(filtroUsuarioDTO.getDataCadastro()));
 		}
 
 		PageDTO<T> pageDTO = new PageDTO<T>();

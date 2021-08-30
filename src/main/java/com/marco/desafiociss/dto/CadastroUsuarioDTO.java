@@ -22,9 +22,9 @@ public class CadastroUsuarioDTO {
 	@Email
 	private String email;
 	
-	@NotEmpty
-	@Size(min = 4, max = 30)
-	private String senha;
+//	@NotEmpty
+//	@Size(min = 4, max = 30)
+//	private String senha;
 	
 	@NotEmpty
 	@Size(min = 11, max = 11)

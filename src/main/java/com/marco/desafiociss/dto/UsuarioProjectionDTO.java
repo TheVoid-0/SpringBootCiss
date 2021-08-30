@@ -3,12 +3,19 @@ package com.marco.desafiociss.dto;
 import java.util.Date;
 
 import com.marco.desafiociss.enums.NivelAcessoEnum;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+/**
+ * 
+ * DTO para ser utilizado como Class Projection nos métodos abstratos do
+ * Repository padrão
+ *
+ */
 @Data
-@NoArgsConstructor
-public class UsuarioDTO {
+@AllArgsConstructor
+public class UsuarioProjectionDTO {
 	private Long id;
 
 	private String nome;

@@ -14,6 +14,7 @@ import com.marco.desafiociss.dto.FiltroUsuarioDTO;
 import com.marco.desafiociss.dto.LoginUsuarioDTO;
 import com.marco.desafiociss.dto.PageDTO;
 import com.marco.desafiociss.dto.UsuarioDTO;
+import com.marco.desafiociss.dto.UsuarioProjectionDTO;
 import com.marco.desafiociss.service.UsuarioService;
 
 @RestController
@@ -35,7 +36,7 @@ public class UsuarioControllerImpl implements UsuarioController {
 	}
 
 	@Override
-	public ResponseEntity<UsuarioDTO> findOneUsuario(
+	public ResponseEntity<UsuarioProjectionDTO> findOneUsuario(
 			@AuthenticationPrincipal AutenticacaoUsuarioDTO autenticacaoUsuarioDTO, Long id) {
 		return ResponseEntity.ok(this.usuarioService.findOneById(autenticacaoUsuarioDTO, id));
 	}

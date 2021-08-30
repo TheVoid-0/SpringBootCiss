@@ -186,11 +186,25 @@ public class JwtTokenProvider {
 		}
 	}
 
+	/**
+	 * Verifica se o usuario logado possui acesso a um recurso específico, a lógica
+	 * pode ser modificada se mais níveis de recursos forem necessários.<br>
+	 * Deve ser usado quando a falha na autenticação impede o sistema de continuar
+	 */
 	public void verifyAccess(IAutenticacao autenticacaoDTO, NivelAcessoEnum nivelRequerido, Long idUsuario) {
-		if (!autenticacaoDTO.getNivelAcesso().equals(NivelAcessoEnum.ADMIN)
-				&& !autenticacaoDTO.getId().equals(idUsuario)) {
+		if (!autenticacaoDTO.getNivelAcesso().equals(nivelRequerido) && !autenticacaoDTO.getId().equals(idUsuario)) {
 			throw new BusinessServerException(ErrorCode.ACCESS_DENIED);
 		}
+	}
+
+	/**
+	 * Verifica se o usuario logado possui acesso administrativo.
+	 */
+	public Boolean isAdmin(IAutenticacao autenticacaoDTO) {
+		if (!autenticacaoDTO.getNivelAcesso().equals(NivelAcessoEnum.ADMIN)) {
+			return false;
+		}
+		return true;
 	}
 
 	public Boolean isTokenValid(String token) {

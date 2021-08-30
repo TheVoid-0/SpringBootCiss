@@ -14,6 +14,7 @@ import com.marco.desafiociss.dto.FiltroUsuarioDTO;
 import com.marco.desafiociss.dto.LoginUsuarioDTO;
 import com.marco.desafiociss.dto.PageDTO;
 import com.marco.desafiociss.dto.UsuarioDTO;
+import com.marco.desafiociss.dto.UsuarioProjectionDTO;
 import com.marco.desafiociss.enums.NivelAcessoEnum;
 import com.marco.desafiociss.errors.BusinessServerException;
 import com.marco.desafiociss.errors.ErrorCode;
@@ -55,7 +56,9 @@ public class UsuarioServiceImpl implements UsuarioService {
 		}
 
 		Usuario usuario = this.modelMapper.map(cadastroUsuarioDTO, Usuario.class);
-		usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
+		// A senha deveria ser gerada automaticamente e enviada por e-mail
+		// Mas para simplificar será fixa como root
+		usuario.setSenha(passwordEncoder.encode("root"));
 		this.usuarioRepository.save(usuario);
 		return true;
 	}
@@ -86,9 +89,9 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 
 	@Override
-	public UsuarioDTO findOneById(AutenticacaoUsuarioDTO autenticacaoUsuarioDTO, Long id) {
+	public UsuarioProjectionDTO findOneById(AutenticacaoUsuarioDTO autenticacaoUsuarioDTO, Long id) {
 		this.jwtTokenProvider.verifyAccess(autenticacaoUsuarioDTO, NivelAcessoEnum.ADMIN, id);
-		return this.usuarioRepository.findFirstById(id, UsuarioDTO.class)
+		return this.usuarioRepository.findFirstById(id, UsuarioProjectionDTO.class)
 				.orElseThrow(() -> new BusinessServerException(ErrorCode.USER_NOT_FOUND));
 	}
 
@@ -112,7 +115,15 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 		Usuario usuario = this.usuarioRepository.findById(id)
 				.orElseThrow(() -> new BusinessServerException(ErrorCode.USER_NOT_FOUND));
-		usuario = this.modelMapper.map(editarUsuarioDTO, Usuario.class);
+
+		if (this.jwtTokenProvider.isAdmin(autenticacaoUsuarioDTO)) {
+			usuario.setNivelAcesso(editarUsuarioDTO.getNivelAcesso());
+		}
+
+		usuario.setEmail(editarUsuarioDTO.getEmail());
+		usuario.setNome(editarUsuarioDTO.getNome());
+		usuario.setSobrenome(editarUsuarioDTO.getSobrenome());
+		usuario.setPis(editarUsuarioDTO.getPis());
 
 		return this.modelMapper.map(this.usuarioRepository.save(usuario), UsuarioDTO.class);
 
