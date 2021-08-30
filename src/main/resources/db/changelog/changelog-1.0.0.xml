@@ -1,0 +1,76 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet id="criar_usuarios" author="Marco Moura">
+		<preConditions onFail="MARK_RAN">
+			<not>
+				<tableExists tableName="usuario" />
+			</not>
+		</preConditions>
+		
+		<createTable tableName="usuario">
+		
+			<column name="id" type="numeric(18,0)" remarks="CÓDIGO INDENTIFICADOR">
+				<constraints primaryKey="true" primaryKeyName="usuario_pk" nullable="false" />
+			</column>
+			
+			<column name="nome" type="varchar(30)" remarks="Nome do usuário">
+				<constraints nullable="false" />
+			</column>
+			
+			<column name="sobrenome" type="varchar(50)" remarks="sobrenome do usuário">
+				<constraints nullable="false"/>
+			</column>
+			
+			<column name="email" type="varchar(255)" remarks="email do usuário">
+				<constraints nullable="false" unique="true"/>
+			</column>
+			
+			<column name="senha" type="varchar(255)" remarks="senha do usuário">
+				<constraints nullable="false"/>
+			</column>
+			
+			<column name="pis" type="varchar(11)" remarks="numero pis/nis do usuário">
+				<constraints nullable="false"/>
+			</column>
+			
+			<column name="nivel_acesso" type="numeric(1,0)"
+				remarks="Nivel de acesso(0 - USUARIO NORMAL, 1- ADM)">
+				<constraints nullable="false" />
+			</column>
+			
+			<column name="cadastrado_em" type="datetime"
+				defaultValueComputed="CURRENT_TIMESTAMP" remarks="Data de cadastro">
+				<constraints nullable="false" />
+			</column>
+
+			<column name="atualizado_em" type="datetime"
+				defaultValueComputed="CURRENT_TIMESTAMP"
+				remarks="Data de manutenção">
+				<constraints nullable="false" />
+			</column>
+			
+		</createTable>
+		
+		<createSequence sequenceName="seq_usuario" startValue="1" />
+	</changeSet>
+
+	<changeSet id="carga_usuario_root" author="Marco Moura">
+		<sqlFile path="db/usuario_root.sql" />
+	</changeSet>
+	
+	<changeSet id="add_default_id_in_usuario" author="Marco Moura">
+		<sql>
+		ALTER TABLE usuario ADD CONSTRAINT DF_id_usuario_seq DEFAULT NEXT VALUE FOR seq_usuario FOR id
+		</sql>
+	</changeSet>
+	
+	<changeSet id="carga_usuario_teste_default_value" author="Marco Moura">
+		<sql>
+		INSERT INTO usuario(nome, sobrenome, email, senha, pis, nivel_acesso) VALUES ('teste', 'teste', 'teste@teste.com', '$2b$10$8wP3D85o1kZOJjYxlGAlz.T/Sf91uE8ozb6TQENHX6mvyzXx0aD1S', '11111111111', 1);
+		</sql>
+	</changeSet>
+
+</databaseChangeLog>

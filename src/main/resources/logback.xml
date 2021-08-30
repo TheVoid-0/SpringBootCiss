@@ -2,7 +2,8 @@
 <configuration>
 
 	<!-- use Spring default values -->
-	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+	<include
+		resource="org/springframework/boot/logging/logback/defaults.xml" />
 
 	<property name="LOGS" value="./logs" />
 
@@ -41,8 +42,8 @@
 		<appender-ref ref="Console" />
 	</root>
 
-	<!-- LOG "com.baeldung*" at TRACE level -->
-	<logger name="com.baeldung" level="trace" additivity="false">
+	<!-- LOG "com.marco*" at TRACE level -->
+	<logger name="com.marco" level="trace" additivity="false">
 		<appender-ref ref="RollingFile" />
 		<appender-ref ref="Console" />
 	</logger>

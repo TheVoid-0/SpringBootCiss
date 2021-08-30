@@ -1,0 +1,1 @@
+INSERT INTO usuario(id, nome, sobrenome, email, senha, pis, nivel_acesso) SELECT NEXT VALUE FOR seq_usuario, 'root', 'root', 'root@root.com', '$2b$10$8wP3D85o1kZOJjYxlGAlz.T/Sf91uE8ozb6TQENHX6mvyzXx0aD1S', '11111111111', 1;
