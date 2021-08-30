@@ -62,7 +62,9 @@ public class UsuarioRepositoryCustomImpl implements UsuarioRepositoryCustom {
 
 		pageDTO.setPage(filtroUsuarioDTO.getPage());
 
-		pageDTO.setTotalCount(queryTotal.from(qUsuario).fetchCount());
+		// Depreciado :( Apesar de que provavelmente funciona normalmente para uma query
+		// simples e sem parâmetros
+		// pageDTO.setTotalCount(queryTotal.from(qUsuario).fetchCount());
 
 		return pageDTO;
 	}

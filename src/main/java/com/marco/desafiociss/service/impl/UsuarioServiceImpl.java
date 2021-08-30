@@ -96,7 +96,10 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public PageDTO<UsuarioDTO> filtrarUsuarios(FiltroUsuarioDTO filtroUsuarioDTO) {
-		return this.usuarioRepository.filtrarUsuarios(filtroUsuarioDTO, UsuarioDTO.class);
+		PageDTO<UsuarioDTO> pageDTO = this.usuarioRepository.filtrarUsuarios(filtroUsuarioDTO, UsuarioDTO.class);
+		// Por enquanto vai assim mesmo já que o fetchCount ta depreciado =/
+		pageDTO.setTotalCount(this.usuarioRepository.count());
+		return pageDTO;
 	}
 
 	@Override
