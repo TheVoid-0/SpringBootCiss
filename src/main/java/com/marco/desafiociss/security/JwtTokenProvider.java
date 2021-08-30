@@ -13,6 +13,9 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.marco.desafiociss.dto.AutenticacaoUsuarioDTO;
+import com.marco.desafiociss.enums.NivelAcessoEnum;
+import com.marco.desafiociss.errors.BusinessServerException;
+import com.marco.desafiociss.errors.ErrorCode;
 import com.marco.desafiociss.service.UsuarioService;
 
 import io.jsonwebtoken.Claims;
@@ -147,9 +150,7 @@ public class JwtTokenProvider {
 			bearerToken = bearerToken.substring(7, bearerToken.length());
 			autenticacaoDTO = this.tryGetInfo(bearerToken, type);
 
-		}
-
-		if (bearerToken != null) {
+		} else if (bearerToken != null) {
 			this.tryGetInfo(bearerToken, AutenticacaoUsuarioDTO.class);
 		}
 		// Busca permissão no banco mesmo possuindo nas informações do token por
@@ -180,6 +181,13 @@ public class JwtTokenProvider {
 
 		} catch (JsonProcessingException e) {
 			return null;
+		}
+	}
+
+	public void verifyAccess(IAutenticacao autenticacaoDTO, NivelAcessoEnum nivelRequerido, Long idUsuario) {
+		if (!autenticacaoDTO.getNivelAcesso().equals(NivelAcessoEnum.ADMIN)
+				&& !autenticacaoDTO.getId().equals(idUsuario)) {
+			throw new BusinessServerException(ErrorCode.ACCESS_DENIED);
 		}
 	}
 

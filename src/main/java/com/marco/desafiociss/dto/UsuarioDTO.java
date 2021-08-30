@@ -4,9 +4,11 @@ import java.util.Date;
 
 import com.marco.desafiociss.enums.NivelAcessoEnum;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class UsuarioDTO {
 	private Long id;
 	

@@ -10,12 +10,16 @@ import com.marco.desafiociss.annotation.NivelAcesso;
 import com.marco.desafiociss.domain.Usuario;
 import com.marco.desafiociss.dto.AutenticacaoUsuarioDTO;
 import com.marco.desafiociss.dto.CadastroUsuarioDTO;
+import com.marco.desafiociss.dto.EditarUsuarioDTO;
+import com.marco.desafiociss.dto.FiltroUsuarioDTO;
 import com.marco.desafiociss.dto.LoginUsuarioDTO;
+import com.marco.desafiociss.dto.PageDTO;
 import com.marco.desafiociss.dto.UsuarioDTO;
 import com.marco.desafiociss.enums.NivelAcessoEnum;
 import com.marco.desafiociss.errors.BusinessServerException;
 import com.marco.desafiociss.errors.ErrorCode;
 import com.marco.desafiociss.repository.UsuarioRepository;
+import com.marco.desafiociss.security.IAutenticacao;
 import com.marco.desafiociss.security.JwtTokenProvider;
 import com.marco.desafiociss.service.UsuarioService;
 
@@ -84,8 +88,32 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 
 	@Override
-	public UsuarioDTO findOneById(Long id) {
+	public UsuarioDTO findOneById(AutenticacaoUsuarioDTO autenticacaoUsuarioDTO, Long id) {
+		this.jwtTokenProvider.verifyAccess(autenticacaoUsuarioDTO, NivelAcessoEnum.ADMIN, id);
 		return this.usuarioRepository.findFirstById(id, UsuarioDTO.class)
 				.orElseThrow(() -> new BusinessServerException(ErrorCode.USER_NOT_FOUND));
+	}
+
+	@Override
+	public PageDTO<UsuarioDTO> filtrarUsuarios(FiltroUsuarioDTO filtroUsuarioDTO) {
+		return this.usuarioRepository.filtrarUsuarios(filtroUsuarioDTO, UsuarioDTO.class);
+	}
+
+	@Override
+	@NivelAcesso(nivelAcessoRequerido = NivelAcessoEnum.ADMIN)
+	public void delete(AutenticacaoUsuarioDTO autenticacaoUsuarioDTO, Long id) {
+		this.usuarioRepository.deleteById(id);
+	}
+
+	@Override
+	public UsuarioDTO save(AutenticacaoUsuarioDTO autenticacaoUsuarioDTO, Long id, EditarUsuarioDTO editarUsuarioDTO) {
+		this.jwtTokenProvider.verifyAccess(autenticacaoUsuarioDTO, NivelAcessoEnum.ADMIN, id);
+
+		Usuario usuario = this.usuarioRepository.findById(id)
+				.orElseThrow(() -> new BusinessServerException(ErrorCode.USER_NOT_FOUND));
+		usuario = this.modelMapper.map(editarUsuarioDTO, Usuario.class);
+
+		return this.modelMapper.map(this.usuarioRepository.save(usuario), UsuarioDTO.class);
+
 	}
 }
