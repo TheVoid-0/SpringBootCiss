@@ -41,7 +41,9 @@ public enum ErrorCode {
 	/**
 	 * Erro inesperado na implementação!"
 	 */
-	IMPLEMENTATION_ERROR("Erro inesperado na implementação!", HttpStatus.INTERNAL_SERVER_ERROR, Severity.ALTA);
+	IMPLEMENTATION_ERROR("Erro inesperado na implementação!", HttpStatus.INTERNAL_SERVER_ERROR, Severity.ALTA),
+
+	INVALID_PIS("Código PIS/NIS é inválido!", HttpStatus.INTERNAL_SERVER_ERROR, Severity.BAIXA);
 
 	private final String customMessage;
 	private final HttpStatus httpStatus;

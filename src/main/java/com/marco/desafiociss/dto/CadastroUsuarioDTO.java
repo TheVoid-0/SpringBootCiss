@@ -27,7 +27,7 @@ public class CadastroUsuarioDTO {
 //	private String senha;
 	
 	@NotEmpty
-	@Size(min = 11, max = 11)
+	@Size(min = 11, max = 14)
 	private String pis;
 	
 	private NivelAcessoEnum nivelAcesso;

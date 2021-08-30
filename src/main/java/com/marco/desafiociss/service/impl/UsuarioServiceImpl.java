@@ -21,6 +21,7 @@ import com.marco.desafiociss.errors.ErrorCode;
 import com.marco.desafiociss.repository.UsuarioRepository;
 import com.marco.desafiociss.security.JwtTokenProvider;
 import com.marco.desafiociss.service.UsuarioService;
+import com.marco.desafiociss.util.ValidacaoUtil;
 
 import org.modelmapper.ModelMapper;
 
@@ -57,13 +58,17 @@ public class UsuarioServiceImpl implements UsuarioService {
 			throw new BusinessServerException(ErrorCode.USER_ALREADY_EXISTS);
 		}
 
+		cadastroUsuarioDTO.setPis(ValidacaoUtil.validarPis(cadastroUsuarioDTO.getPis()));
+
 		Usuario usuario = this.modelMapper.map(cadastroUsuarioDTO, Usuario.class);
+
 		// A senha deveria ser gerada automaticamente e enviada por e-mail
 		// Mas para simplificar será fixa como root
 		usuario.setSenha(passwordEncoder.encode("root"));
 		this.usuarioRepository.save(usuario);
 		return true;
 	}
+
 
 	@Override
 	public AutenticacaoUsuarioDTO login(LoginUsuarioDTO loginUsuarioDTO) {
