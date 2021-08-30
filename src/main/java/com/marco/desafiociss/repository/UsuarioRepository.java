@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 
 import com.marco.desafiociss.domain.Usuario;
-import com.marco.desafiociss.enums.NivelAcessoEnum;
 import com.marco.desafiociss.repository.custom.UsuarioRepositoryCustom;
 
 public interface UsuarioRepository extends UsuarioRepositoryCustom, JpaRepository<Usuario, Long> {

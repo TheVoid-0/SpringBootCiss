@@ -1,7 +1,6 @@
 package com.marco.desafiociss.repository.custom.impl;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -24,14 +23,14 @@ public class UsuarioRepositoryCustomImpl implements UsuarioRepositoryCustom {
 	@Override
 	public <T> PageDTO<T> filtrarUsuarios(FiltroUsuarioDTO filtroUsuarioDTO, Class<T> projectionType) {
 		JPAQuery<Usuario> query = new JPAQuery<>(entityManager);
-		JPAQuery<Usuario> queryTotal = new JPAQuery<>(entityManager);
+		// JPAQuery<Usuario> queryTotal = new JPAQuery<>(entityManager);
 		QUsuario qUsuario = QUsuario.usuario;
 
 		Long limit = 10L; // limite fixo por enquanto
 		query.limit(limit);
-		query.offset(limit * (filtroUsuarioDTO.getPage() - 1L));
+		query.offset(limit * filtroUsuarioDTO.getPage());
+		Order order = QueryDslUtil.getOrderValueOrNull(filtroUsuarioDTO.getOrderDirection());
 
-		Order order = filtroUsuarioDTO.getOrderDirection();
 		query.from(qUsuario);
 
 		if (order != null) {
@@ -41,16 +40,16 @@ public class UsuarioRepositoryCustomImpl implements UsuarioRepositoryCustom {
 		}
 
 		if (filtroUsuarioDTO.getNome() != null) {
-			query.where(qUsuario.nome.like(filtroUsuarioDTO.getNome()));
+			query.where(qUsuario.nome.like(QueryDslUtil.addLike(filtroUsuarioDTO.getNome())));
 		}
 		if (filtroUsuarioDTO.getSobrenome() != null) {
-			query.where(qUsuario.sobrenome.like(filtroUsuarioDTO.getSobrenome()));
+			query.where(qUsuario.sobrenome.like(QueryDslUtil.addLike(filtroUsuarioDTO.getSobrenome())));
 		}
 		if (filtroUsuarioDTO.getEmail() != null) {
-			query.where(qUsuario.email.like(filtroUsuarioDTO.getEmail()));
+			query.where(qUsuario.email.like(QueryDslUtil.addLike(filtroUsuarioDTO.getEmail())));
 		}
 		if (filtroUsuarioDTO.getPis() != null) {
-			query.where(qUsuario.pis.like(filtroUsuarioDTO.getPis()));
+			query.where(qUsuario.pis.like(QueryDslUtil.addLike(filtroUsuarioDTO.getPis())));
 		}
 		if (filtroUsuarioDTO.getDataCriacao() != null) {
 			query.where(qUsuario.dataCadastro.between(new Date(), filtroUsuarioDTO.getDataCriacao()));

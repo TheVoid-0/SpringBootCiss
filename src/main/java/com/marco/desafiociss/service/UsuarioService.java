@@ -8,7 +8,6 @@ import com.marco.desafiociss.dto.LoginUsuarioDTO;
 import com.marco.desafiociss.dto.PageDTO;
 import com.marco.desafiociss.dto.UsuarioDTO;
 import com.marco.desafiociss.enums.NivelAcessoEnum;
-import com.marco.desafiociss.security.IAutenticacao;
 
 public interface UsuarioService {
 	abstract Boolean cadastrar(AutenticacaoUsuarioDTO autenticacaoDTO, CadastroUsuarioDTO cadastroUsuarioDTO);

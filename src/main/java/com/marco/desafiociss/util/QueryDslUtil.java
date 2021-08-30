@@ -14,4 +14,21 @@ public final class QueryDslUtil {
 		Path<Object> fieldPath = Expressions.path(Object.class, classe, fieldName);
 		return new OrderSpecifier(order, fieldPath);
 	}
+
+	public static Order getOrderValueOrNull(String str) {
+		try {
+			return Order.valueOf(str);
+		} catch (IllegalArgumentException e) {
+			return null;
+		}
+	}
+
+	/**
+	 * Adiciona os % % da operação LIKE
+	 * 
+	 * @return
+	 */
+	public static String addLike(String str) {
+		return String.join("%", str, "%");
+	}
 }

@@ -2,7 +2,6 @@ package com.marco.desafiociss.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +18,6 @@ import com.marco.desafiociss.enums.NivelAcessoEnum;
 import com.marco.desafiociss.errors.BusinessServerException;
 import com.marco.desafiociss.errors.ErrorCode;
 import com.marco.desafiociss.repository.UsuarioRepository;
-import com.marco.desafiociss.security.IAutenticacao;
 import com.marco.desafiociss.security.JwtTokenProvider;
 import com.marco.desafiociss.service.UsuarioService;
 

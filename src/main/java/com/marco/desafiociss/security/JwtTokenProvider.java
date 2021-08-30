@@ -155,8 +155,10 @@ public class JwtTokenProvider {
 		}
 		// Busca permissão no banco mesmo possuindo nas informações do token por
 		// questões de segurança
-		autenticacaoDTO.setNivelAcesso(this.usuarioService.getNivelAcesso(autenticacaoDTO.getId()));
-		autenticacaoDTO.setJwtToken(bearerToken);
+		if (autenticacaoDTO != null) {
+			autenticacaoDTO.setNivelAcesso(this.usuarioService.getNivelAcesso(autenticacaoDTO.getId()));
+			autenticacaoDTO.setJwtToken(bearerToken);
+		}
 		return autenticacaoDTO;
 	}
 
