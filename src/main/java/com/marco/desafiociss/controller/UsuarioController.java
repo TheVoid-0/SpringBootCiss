@@ -20,7 +20,7 @@ import com.marco.desafiociss.dto.FiltroUsuarioDTO;
 import com.marco.desafiociss.dto.LoginUsuarioDTO;
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/usuarios")
 public interface UsuarioController {
 
 	@PostMapping()
@@ -38,7 +38,7 @@ public interface UsuarioController {
 	@GetMapping()
 	abstract ResponseEntity<?> filtrarUsuarios(@Valid FiltroUsuarioDTO filtroUsuarioDTO);
 
-	@DeleteMapping()
+	@DeleteMapping("/{id}")
 	abstract ResponseEntity<?> delete(@AuthenticationPrincipal AutenticacaoUsuarioDTO autenticacaoUsuarioDTO,
 			@PathVariable("id") Long id);
 
