@@ -96,8 +96,8 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 
 	@Override
+	@NivelAcesso(nivelAcessoRequerido = NivelAcessoEnum.ADMIN, hasUserId = true)
 	public UsuarioProjectionDTO findOneById(AutenticacaoUsuarioDTO autenticacaoUsuarioDTO, Long id) {
-		this.jwtTokenProvider.verifyAccess(autenticacaoUsuarioDTO, NivelAcessoEnum.ADMIN, id);
 		return this.usuarioRepository.findFirstById(id, UsuarioProjectionDTO.class)
 				.orElseThrow(() -> new BusinessServerException(ErrorCode.USER_NOT_FOUND));
 	}
@@ -117,8 +117,8 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 
 	@Override
+	@NivelAcesso(nivelAcessoRequerido = NivelAcessoEnum.ADMIN, hasUserId = true)
 	public UsuarioDTO save(AutenticacaoUsuarioDTO autenticacaoUsuarioDTO, Long id, EditarUsuarioDTO editarUsuarioDTO) {
-		this.jwtTokenProvider.verifyAccess(autenticacaoUsuarioDTO, NivelAcessoEnum.ADMIN, id);
 
 		Usuario usuario = this.usuarioRepository.findById(id)
 				.orElseThrow(() -> new BusinessServerException(ErrorCode.USER_NOT_FOUND));

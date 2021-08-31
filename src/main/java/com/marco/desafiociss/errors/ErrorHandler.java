@@ -36,13 +36,13 @@ public class ErrorHandler extends ResponseEntityExceptionHandler {
 		return new ResponseEntity<Object>(errors, HttpStatus.BAD_REQUEST);
 	}
 
-	@ExceptionHandler(value = { BusinessServerException.class })
-	protected ResponseEntity<Object> handleRuntimeException(BusinessServerException ex, WebRequest request) {
+	@ExceptionHandler(value = { BusinessServerException.class, ImplementationException.class })
+	protected <T extends HttpRuntimeException> ResponseEntity<Object> handleRuntimeException(T ex, WebRequest request) {
 		this.log(ex);
 		return handleExceptionInternal(ex, ex.getMessage(), new HttpHeaders(), ex.getHttpStatus(), request);
 	}
 
-	private void log(BusinessServerException ex) {
+	private void log(HttpRuntimeException ex) {
 		switch (ex.getSeveridade()) {
 		case BAIXA: {
 			// TODO: Checar se o environment é de produção

@@ -43,7 +43,29 @@ public enum ErrorCode {
 	 */
 	IMPLEMENTATION_ERROR("Erro inesperado na implementação!", HttpStatus.INTERNAL_SERVER_ERROR, Severity.ALTA),
 
-	INVALID_PIS("Código PIS/NIS é inválido!", HttpStatus.INTERNAL_SERVER_ERROR, Severity.BAIXA);
+	/**
+	 * Código PIS/NIS é inválido!"
+	 */
+	INVALID_PIS("Código PIS/NIS é inválido!", HttpStatus.INTERNAL_SERVER_ERROR, Severity.BAIXA),
+
+	/**
+	 * Código PIS/NIS é inválido!
+	 */
+	ERROR_CREATION_JWT("Houve um erro desconhecido na criação de um token JWT", HttpStatus.INTERNAL_SERVER_ERROR,
+			Severity.ALTA),
+
+	/**
+	 * Erro de implementação/utilização na @annotation {@link NivelAcesso}
+	 */
+	NIVEL_ACESSO_IMPL_ERROR(
+			"Erro na implementação/utilização da anotação NivelAcesso, nenhuma condição prevista foi satisfeita",
+			HttpStatus.INTERNAL_SERVER_ERROR, Severity.ALTA),
+
+	/**
+	 * O id passado ao NivelAcesso deve ser um Long!
+	 */
+	NIVEL_ACESSO_ID_INVALIDO("O campo especificado como contendo o id do usuário possui um valor inválido!",
+			HttpStatus.INTERNAL_SERVER_ERROR, Severity.ALTA);
 
 	private final String customMessage;
 	private final HttpStatus httpStatus;

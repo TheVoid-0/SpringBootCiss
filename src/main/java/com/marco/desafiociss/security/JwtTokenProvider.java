@@ -47,29 +47,6 @@ public class JwtTokenProvider {
 	@Lazy
 	private UsuarioService usuarioService;
 
-//	public String generateToken(Usuario usuario) {
-//
-//		AutenticacaoUsuarioDTO autenticacaoUsuarioDTO = modelMapper.map(usuario, AutenticacaoUsuarioDTO.class);
-//
-//		try {
-//			Claims claims = Jwts.claims().setSubject(jsonMapper.writeValueAsString(autenticacaoUsuarioDTO));
-//			Date now = new Date();
-//			Date expirationDate = new Date(now.getTime() + EXPIRES_IN_MILLISECONDS);
-//
-//			return Jwts.builder()//
-//					.setClaims(claims)//
-//					.setIssuedAt(now)//
-//					.setExpiration(expirationDate)//
-//					.signWith(SignatureAlgorithm.HS256, jwtSecret)//
-//					.compact();
-//		} catch (JsonProcessingException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//
-//		return null;
-//	}
-
 	public <T, S> String generateToken(T payload, Class<S> mappedType) {
 		log.debug("EXECUTANDO METODO generateToken");
 
@@ -87,11 +64,8 @@ public class JwtTokenProvider {
 					.signWith(SignatureAlgorithm.HS256, jwtSecret)//
 					.compact();
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new BusinessServerException(ErrorCode.ERROR_CREATION_JWT);
 		}
-
-		return null;
 	}
 
 	public <S extends IAutenticacao> String generateToken(S payload) {
@@ -109,11 +83,8 @@ public class JwtTokenProvider {
 					.signWith(SignatureAlgorithm.HS256, jwtSecret)//
 					.compact();
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new BusinessServerException(ErrorCode.ERROR_CREATION_JWT);
 		}
-
-		return null;
 	}
 
 	public String getToken(HttpServletRequest request) {
